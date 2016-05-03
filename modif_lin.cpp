@@ -10,7 +10,7 @@ using namespace std;
 bool verify_root()
 {
 	if (getuid()) {
-	//	cout << "You must be root to do this!\n";
+		cout << "You must be root to do this!\n";
 		return false;
 	}
 	return true; 	
