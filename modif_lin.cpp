@@ -18,8 +18,10 @@ bool query_module(const std::string &m)
 	if (!verify_root()) return false; 
 		
 	fstream f("/proc/modules");
-	if (!f.is_open())
+	if (!f.is_open()) {
 		cout << "failed opening /proc/modules\n";
+		return false;
+	}
 		   
 	string line;
 	string name;
